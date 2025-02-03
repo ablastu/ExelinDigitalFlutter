@@ -6,13 +6,17 @@ Este proyecto es una aplicación desarrollada en **Flutter** que consume la API 
 Instalación y Ejecución:
 
   Clonar el Repositorio:
+  
     git clone https://github.com/ablastu/ExelinDigitalFlutter
+    
     cd exelindigital
 
   Instalar Dependencias:
+  
     flutter pub get
 
   Ejecutar la aplicación:
+  
     flutter run
 
 
