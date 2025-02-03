@@ -13,23 +13,23 @@ class CommentsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Comentarios')),
       body: FutureBuilder<List<Comment>>(
-        future: ApiService.fetchComments(postId), // Llama a la API para obtener comentarios
+        future: ApiService.fetchComments(postId), 
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator()); // Muestra un indicador de carga
+            return Center(child: CircularProgressIndicator()); 
           }
           if (snapshot.hasError) {
-            return Center(child: Text('Error al obtener comentarios')); // Muestra un mensaje de error
+            return Center(child: Text('Error al obtener comentarios')); 
           }
           if (!snapshot.hasData || snapshot.data!.isEmpty) {
-            return Center(child: Text('No hay comentarios aún')); // Mensaje si no hay datos
+            return Center(child: Text('No hay comentarios aún')); 
           }
 
           // Lista de comentarios
           return ListView.builder(
             itemCount: snapshot.data!.length,
             itemBuilder: (context, index) {
-              return CommentCard(comment: snapshot.data![index]); // Usa CommentCard para mostrar cada comentario
+              return CommentCard(comment: snapshot.data![index]); 
             },
           );
         },

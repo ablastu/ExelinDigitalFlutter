@@ -10,11 +10,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Posts App',
-      debugShowCheckedModeBanner: false, // Oculta el banner de "Debug"
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue, // Color principal de la app
+        primarySwatch: Colors.blue, 
       ),
-      home: HomeScreen(), // La pantalla inicial es HomeScreen
+      home: HomeScreen(), 
     );
   }
 }
